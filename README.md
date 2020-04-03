@@ -1,4 +1,5 @@
 # Simple S3 signer
+[![npm version](https://badge.fury.io/js/simple-s3-signer.svg)](https://badge.fury.io/js/simple-s3-signer)
 
 This library will give you a presigned S3 URL, with very few options.
 
