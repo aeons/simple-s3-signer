@@ -1,6 +1,6 @@
 {
   "name": "simple-s3-signer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Create S3 presigned urls, simply",
   "main": "index.js",
   "types": "index.d.ts",
