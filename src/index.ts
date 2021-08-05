@@ -6,6 +6,7 @@ export interface SignUrl {
   region: string;
   accessKeyId: string;
   secretAccessKey: string;
+  domain?: string;
 }
 
 const te = new TextEncoder();
@@ -35,7 +36,7 @@ const uint8arrayToHex = (arr: Uint8Array): string =>
     .join("");
 
 export const signedS3Url = (opts: SignUrl) => {
-  const host = `${opts.bucket}.s3.amazonaws.com`;
+  const host = `${opts.bucket}.s3.${opts.domain ? opts.domain : `amazonaws.com`}`;
 
   const [date, time] = formatDate(new Date());
   const scope = formatScope(date, opts.region);
